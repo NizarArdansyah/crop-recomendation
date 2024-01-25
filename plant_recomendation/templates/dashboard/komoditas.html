@@ -1,0 +1,323 @@
+{% extends 'partials/base.html' %}
+{% block title %}Komoditas{% endblock %}
+{% block content %}
+<div class="container" style="padding-top: 2rem;padding-bottom: 20rem">
+    <div class="row mt-4">
+        <div class="col-md-9 offset-md-2">
+            <div class="container mt-5">
+                <h2 style="font-size: 22px; margin-bottom: 1rem; font-weight:600">Daftar komoditas yang terdeteksi di aplikasi ini</h2>
+                <p style="margin-bottom:2rem;">Berikut ini adalah daftar komoditas yang diketahui oleh sistem </p>
+                <div id="accordion">
+
+                    <!-- Bayam -->
+                    <div class="card">
+                        <div class="card-header" id="headingBayam">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed d-flex" style="color: #163020; font-weight: 600; align-items: center; gap: 0.25rem; padding:0" data-toggle="collapse" data-target="#collapseBayam" aria-expanded="false" aria-controls="collapseBayam">
+                                    <div style="width: 50px; height: 50px; padding:0px; display:flex; align-items: center">
+                                        <img class="img-fluid" style="width: 100%" src="{{ MEDIA_URL }}media/bayam.jpeg" alt="Ilustrasi Aplikasi">
+                                    </div>
+                                    <span> Bayam </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseBayam" class="collapse" aria-labelledby="headingBayam" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Tanaman bayam berasal dari Amerika yang juga tersebar di daerah tropis dan subtropis di seluruh dunia. Bayam biasa dikonsumsi daunnya yang baik bagi tubuh manusia karena mengandung zat besi.</p>
+                                <p><strong>Benih:</strong></p>
+                                <ul>
+                                    <li>Bayam dikembangkan melalui biji.</li>
+                                    <li>Biji bayam yang dijadikan benih harus cukup tua (+3 bulan).</li>
+                                    <li>Benih bayam tidak memiliki masa dormansi dan kebutuhan benih adalah sebanyak 5-10 kg tiap hektar atau 0,5-1 g/m2.</li>
+                                </ul>
+
+                                <p><strong>Persiapan Lahan:</strong></p>
+                                <ul>
+                                    <li>Lahan dicangkul sedalam 20-30 cm supaya gembur.</li>
+                                    <li>Buat bedengan dengan lebar 100 cm, tinggi 30 cm, dan panjang sesuai kondisi lahan.</li>
+                                    <li>Jarak antar bedengan 30 cm.</li>
+                                    <li>Orientasikan bedengan membujur dari timur ke barat untuk optimalisasi pencahayaan.</li>
+                                    <li>Perhatikan tingkat keasaman tanah, karena tanah asam kurang cocok untuk budidaya bayam.Jika pH tanah kurang dari enam, netralkan dengan kapur atau dolomit sebanyak 2-3 ton per hektar.Jika pH lebih dari 7, netralkan dengan belerang.</li>
+                                    <li>Tambahkan pupuk kandang, terutama kotoran ayam, sebanyak 10 ton per hektar, dan diamkan selama 2-3 hari.</li>
+                                </ul>
+                                
+                                <p><strong>Penanaman:</strong></p>
+                                <ul>
+                                    <li>Pilih area terbuka untuk menanam benih bayam, karena penanaman di dalam ruangan bisa membuat pemindahan bibit menjadi sulit.</li>
+                                    <li>Tanam benih bayam dengan menaburkan ke dalam tanah dengan kedalaman antara ½ hingga 1 inci.</li>
+                                    <li>Taburkan sekitar 12 biji per kaki baris untuk penanaman yang optimal.</li>
+                                    <li>Tutupi benih dengan tanah sedikit agar tertutup dengan baik.</li>
+                                    <li>Sirami bibit bayam yang baru ditanam dengan baik untuk memastikan pertumbuhannya yang subur..</li>
+                                </ul>
+                                
+                                <p><strong>Pemupukan:</strong></p>
+                                <ul>
+                                    <li>Sebagai starter, tambahkan Urea dan pupuk cair pada tanaman.</li>
+                                    <li>3 hari sebelum tanam, berikan pupuk dasar kotoran ayam yang telah difermentasi.</li>
+                                    <li>Pemupukan tambahan perlu dilakukan setelah bayam berusia dua minggu.</li>
+                                </ul>
+
+                                <p><strong>Pemeliharaan:</strong></p>
+                                <ul>
+                                    <li>Lakukan penyiraman dua kali sehari, terutama saat musim kemarau, untuk menjaga kelembaban tanah saat benih bayam ditanam.</li>
+                                    <li>Pastikan kelembaban tanah terjaga dengan baik, terutama pada fase berkecambah.</li>
+                                    <li>Perhatikan keberadaan gulma atau tanaman liar lainnya setelah bayam berkecambah.</li>
+                                    <li>Lakukan tindakan pencegahan dan pengendalian, termasuk penggunaan pestisida hayati jika diperlukan.</li>
+                                    <li>Untuk pengendalian OPT, gunakan pestisida yang aman.</li>
+                                </ul>
+
+                                <p><strong>Panen dan Pasca Panen:</strong></p>
+                                <ul>
+                                    <li>Bayam cabut dipanen pada umur 3-4 minggu setelah tanam.</li>
+                                    <li>Bayam petik dapat dipanen pada umur 1-1,5 bulan dengan interval seminggu sekali.</li>
+                                    <li>Tempatkan bayam yang baru dipanen di tempat yang teduh atau merendamkan bagian akar ke dalam air.</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brokoli -->
+                    <div class="card">
+                        <div class="card-header" id="headingBrokoli">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed d-flex" style="color: #163020; font-weight: 600; align-items: center; gap: 0.25rem; padding:0" data-toggle="collapse" data-target="#collapseBrokoli" aria-expanded="false" aria-controls="collapseBrokoli">
+                                    <div style="width: 50px; height: 50px; padding:0px; display:flex; align-items: center">
+                                        <img class="img-fluid" style="width: 100%" src="{{ MEDIA_URL }}media/brokoli.jpeg" alt="Ilustrasi Aplikasi">
+                                    </div>
+                                    <span> Brokoli </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseBrokoli" class="collapse" aria-labelledby="headingBrokoli" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Brokoli merupakan salah satu jenis sayuran dengan tangkai yang kuat dengan tunas kecil-kecil, tumbuh baik pada daerah dingin. Brokoli mengandung vitamin, gizi tinggi serta rendah kalori yang sehat dikonsumsi.</p>
+                                <p><strong>Benih:</strong></p>
+                                <ul>
+                                    <li>Penggunaan varietas benih brokoli seperti varietas Bejo atau varietas lokal yang tersertifikasi.</li>
+                                    <li>Kebutuhan benih untuk lahan luas sekitar 300-350 gr/ha, disesuaikan untuk penanaman dalam skala kecil.</li>
+                                    <li>Sterilisasi benih dengan merendam dalam larutan fungisida atau air panas 55°C selama 15-30 menit.</li>
+                                    <li>Uji kualitas benih dengan merendam dalam air, memilih benih yang tenggelam menandakan kualitas yang baik.</li>
+                                </ul>
+                                <p><strong>Persiapan Lahan:</strong></p>
+                                <ul>
+                                    <li>Membajak atau mencangkul tanah hingga kedalaman 30 cm.</li>
+                                    <li>Pembuatan bedengan memanjang dari utara ke selatan dengan lebar 110-120 cm.</li>
+                                    <li>Pemberian naungan menggunakan plastik, jerami, atau dedaunan dengan tinggi masing-masing untuk bagian timur dan barat (1,25-1,5 m dan 0,8-1 m).</li>
+                                </ul>
+                                <p><strong>Penanaman:</strong></p>
+                                <ul>
+                                    <li>Pilih waktu penanaman antara pukul 06.00 - 09.00 pagi hari atau pukul 15.00 - 17.00 sore hari.</li>
+                                    <li>Siapkan bibit yang telah dilepaskan dari wadah persemaiannya. Pastikan bibit memiliki 3-4 helai daun</li>
+                                    <li>Tentukan jarak tanam sebesar 40 x 50 cm.</li>
+                                    <li>Benamkan bibit brokoli hasil persemaian pada lubang tanam yang sudah disiapkan sebelumnya.</li>
+                                    <li>Lakukan penanaman dengan hati-hati untuk menghindari kerusakan pada akar maupun daun.</li>
+                                    <li>Tutup kembali lubang tanam dengan tanah sisa galian.</li>
+                                </ul>
+                                <p><strong>Pemupukan:</strong></p>
+                                <ul>
+                                    <li>Pemupukan Susulan pada Umur Tanaman 1, 3, dan 5 MST</li>
+                                    <li>Menggunakan dosis pupuk sesuai rekomendasi yang telah ditentukan</li>
+                                    <li>Menaburkan pupuk di sekitar tanaman dengan jarak 10-15 cm dari batang</li>
+                                    <li>Menimbun pupuk dengan tanah setelah disebar di sekitar tanaman.</li>
+                                    <li>Pupuk susulan III dapat dilakukan bersamaan dengan pemberian pupuk daun.</li>
+                                    <li>Memberikan pupuk susulan III dengan metode yang sama seperti pemupukan susulan pada umur tanaman 1, 3, dan 5 MST.</li>
+                                </ul>
+                                <p><strong>Pemeliharaan:</strong></p>
+                                <ul>
+                                    <li>Lakukan penyiraman rutin 1 kali sehari, terutama pada pagi atau sore hari.</li>
+                                    <li>Pada musim kemarau, tingkatkan frekuensi penyiraman menjadi 2 kali sehari, terutama pada awal fase pertumbuhan dan pembentukan bunga</li>
+                                    <li>Penyiraman dapat dilakukan manual atau menggunakan mesin, tergantung pada luas lahan dan efektivitasnya.</li>
+                                </ul>
+                                <p><strong>Panen dan Pasca Panen:</strong></p>
+                                <ul>
+                                    <li>Brokoli dapat dipanen setelah mencapai 55-100 hari, terlihat dari massa bunga yang telah mencapai ukuran maksimal</li>
+                                    <li>Gunakan alat seperti pisau kebun untuk memotong bagian bunga brokoli, biarkan daunnya.</li>
+                                    <li>Setelah dipanen, simpan hasil panen di tempat yang teduh untuk proses sortasi.</li>
+                                    <li>Lakukan sortasi berdasarkan diameter kepala bunga, dengan kelas >30 cm, 25-30 cm, 20-25 cm, dan 15-20 cm.</li>
+                                    <li>Penyimpanan terbaik dilakukan di ruang gelap dengan suhu 20°C, kelembaban 75-85%, atau kamar dingin dengan suhu 4.4°C dan kelembaban 85-95%.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kacang Buncis -->
+                    <div class="card">
+                        <div class="card-header" id="headingBuncis">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed d-flex" style="color: #163020; font-weight: 600; align-items: center; gap: 0.25rem; padding:0" data-toggle="collapse" data-target="#collapseBuncis" aria-expanded="false" aria-controls="collapseBuncis">
+                                    <div style="width: 50px; height: 50px; padding:0px; display:flex; align-items: center">
+                                        <img class="img-fluid" style="width: 100%" src="{{ MEDIA_URL }}media/buncis.jpeg" alt="Ilustrasi Aplikasi">
+                                    </div>
+                                    <span> Buncis </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseBuncis" class="collapse" aria-labelledby="headingBuncis" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Kacang Buncis merupakan tanaman sayuran polong semusim yang merambat termasuk ke dalam famili Fabaceae. Buahnya berdaging dan didalamnya terdapat biji-biji muda, yang dikomsumsi sebagai sayur buah</p>
+                                <p><strong>Benih:</strong></p>
+                                <ul>
+                                    <li>Pilih bibit buncis dari tanaman yang sehat dan subur dari bedengan terbaik di area pertanaman buncis untuk memastikan kualitasnya.</li>
+                                    <li>Hindari memilih bibit dari tanaman yang mengalami penuaan atau kondisi kurang baik.</li>
+                                </ul>
+                                <p><strong>Persiapan Lahan:</strong></p>
+                                <ul>
+                                    <li>Lakukan penggemburan tanah dengan metode bajak untuk mempersiapkan lahan.</li>
+                                    <li>Perhatikan tingkat keasaman tanah, dan jika terlalu asam, lakukan pengapuran secukupnya.</li>
+                                    <li>Buat bedengan dengan lebar 1 meter dan tinggi 20-30 cm dengan jarak antar bedengan sebaiknya 30-40 cm.</li>
+                                    <li>Buat lubang tanam membentuk dua baris pada bedengan.</li>
+                                    <li>Jarak antar baris tanam adalah 50-60 cm, sementara jarak dalam baris tanam adalah 30 cm</li>
+                                    <li>Masukkan pupuk kandang atau kompos ke dalam lubang-lubang tanam</li>
+                                </ul>
+                                <p><strong>Penanaman:</strong></p>
+                                <ul>
+                                    <li>Buat lubang pada media tanam yang telah disiapkan.</li>
+                                    <li>Masukkan dua biji benih buncis ke dalam setiap lubang tanam dengan merata</li>
+                                    <li>Padatkan dengan tutup kembali lubang tanam menggunakan tanah dengan hati-hati.</li>
+                                    <li>Siram tanaman dengan air secukupnya setelah penanaman untuk memastikan tanah lembab.</li>
+                                    <li>Letakkan tanaman buncis di tempat yang terkena sinar matahari langsung atau mendapatkan pencahayaan yang cukup.</li>
+                                </ul>
+                                <p><strong>Pemupukan:</strong></p>
+                                <ul>
+                                    <li>Selain kebutuhan air, tanaman buncis juga memerlukan nutrisi yang cukup untuk pertumbuhan optimal.</li>
+                                    <li>Saat buncis mencapai usia dua minggu, berikan pupuk NPK sebagai tambahan nutrisi.</li>
+                                    <li>Gunakan takaran dua sendok makan pupuk NPK dan aplikasikan pada tanaman dengan merata.</li>
+                                    <li>Lakukan pemberian pupuk secara rutin sesuai dengan jadwal yang direkomendasikan.</li>
+                                </ul>
+                                <p><strong>Pemeliharaan:</strong></p>
+                                <ul>
+                                    <li>Pada awal penanaman, lakukan penyiraman dua kali sehari pada pagi dan sore hari dengan jumlah air yang cukup. Selanjutnya, kurangi frekuensi penyiraman menjadi sehari sekali setelah buncis mulai tumbuh.</li>
+                                    <li>Lakukan penyiangan secara teratur 2 minggu sekali untuk menghilangkan gulma-gulma di sekitar tanaman buncis.</li>
+                                    <li>Jika varietas buncis yang ditanam adalah jenis merambat, pasanglah tiang penyangga kurang lebih 3 meter.</li>
+                                    <li></li>
+                                </ul>
+                                <p><strong>Panen dan Pasca Panen:</strong></p>
+                                <ul>
+                                    <li>Panen buncis dapat dilakukan ketika tanaman mencapai usia 50-60 hari.</li>
+                                    <li>Tandanya adalah buah buncis telah berbunga, memiliki warna berbeda dari buncis muda, tekstur padat, dan ukuran maksimal.</li>
+                                    <li>Gunakan gunting taman untuk memotong buncis dengan hati-hati.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lombok -->
+                    <div class="card">
+                        <div class="card-header" id="headingLombok">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed d-flex" style="color: #163020; font-weight: 600; align-items: center; gap: 0.25rem; padding:0" data-toggle="collapse" data-target="#collapseLombok" aria-expanded="false" aria-controls="collapseLombok">
+                                    <div style="width: 50px; height: 50px; padding:0px; display:flex; align-items: center">
+                                        <img class="img-fluid" style="width: 100%" src="{{ MEDIA_URL }}media/lombok.jpeg" alt="Ilustrasi Aplikasi">
+                                    </div>
+                                    <span> Lombok / Cabai Rawit </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseLombok" class="collapse" aria-labelledby="headingLombok" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Lombok / Cabai rawit adalah tanaman hortikultura dari jenis sayuran yang memiliki buah kecil dengan rasa yang pedas. Termasuk dalam famili Solanaceae yang dapat ditanam didaerah tropis maupun subtropis.</p>
+                                <p><strong>Benih:</strong></p>
+                                <ul>
+                                    <li>Rendam benih cabai rawit dalam air hangat dengan suhu sekitar 50°C selama 1 jam.</li>
+                                    <li>Pindahkan benih yang telah direndam ke media semai dengan jarak antar benih sekitar 1-3 cm.</li>
+                                    <li>Gunakan wadah semai berupa kotak kayu atau polybag dengan ukuran 10 x 12 cm dan diameter 5 cm.</li>
+                                    <li>Siapkan campuran tanah dan pupuk kandang/kompos dengan perbandingan 1:3.</li>
+                                    <li>Buat lubang di kiri bawah dan kanan wadah semai sebanyak 3-4 lubang.</li>
+                                </ul>
+                                <p><strong>Penanaman:</strong></p>
+                                <ul>
+                                    <li>Buat lubang tanam dengan jarak 60 cm x 50 cm di lahan terbuka.</li>
+                                    <li>Pindahkan bibit cabai rawit hasil persemaian ke lubang tanam, satu anakan per lubang.</li>
+                                </ul>
+                                <p><strong>Pemeliharaan:</strong></p>
+                                <ul>
+                                    <li>Lakukan penyiraman setiap hari untuk menjaga kelembaban tanah hingga tanaman tumbuh normal</li>
+                                    <li>Amati dan identifikasi tanaman yang sakit atau mati.</li>
+                                    <li>Lakukan penyulaman atau gantilah tanaman yang tidak sehat dengan bibit cadangan berkualitas baik.sebaiknya dilakukan paling lambat 1-2 minggu setelah tanam untuk menjaga produktivitas.</li>
+                                    <li>Lakukan pengendalian gulma secara bersamaan dengan pemberian pupuk susulan.</li>
+                                    <li>Bersihkan area tanam dari gulma yang dapat bersaing dengan tanaman cabai rawit.</li>
+                                    <li>Berikan pupuk susulan sesuai dengan dosis yang direkomendasikan.</li>
+                                </ul>
+                                <p><strong>Panen dan Pasca Panen:</strong></p>
+                                <ul>
+                                    <li>Panen dilakukan pada usia 70-75 hari setelah tanam.</li>
+                                    <li>Frekuensi panen bisa dilakukan setiap 3-7 hari.</li>
+                                    <li>Waktu panen disesuaikan dengan kebutuhan pasar, baik saat buah masih hijau atau matang penuh.</li>
+                                    <li>Produktivitas maksimal dapat dicapai dengan budidaya cabai rawit yang baik selama 2-3 tahun.</li>
+                                    <li>Pengeringan dilakukan pada suhu 60°C selama 12-20 jam.</li>
+                                    <li>Cabai rawit disimpan dalam kantong atau karung plastik kedap udara dengan kelembapan udara sekitar 70%.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kentang -->
+                    <div class="card">
+                        <div class="card-header" id="headingKentang">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed d-flex" style="color: #163020; font-weight: 600; align-items: center; gap: 0.25rem; padding:0" data-toggle="collapse" data-target="#collapseKentang" aria-expanded="false" aria-controls="collapseKentang">
+                                    <div style="width: 50px; height: 50px; padding:0px; display:flex; align-items: center">
+                                        <img class="img-fluid" style="width: 100%" src="{{ MEDIA_URL }}media/kentang.jpeg" alt="Ilustrasi Aplikasi">
+                                    </div>
+                                    <span> Kentang </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseKentang" class="collapse" aria-labelledby="headingKentang" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Kentang ialah tanaman umbi-umbian edible dan tergolong tanaman pendek tidak berkayu semusim. Kentang membentuk umbi di bawah permukaan tanah dan menjadi sarana perbanyakan secara vegetatif.</p>
+                                <p><strong>Benih:</strong></p>
+                                <ul>
+                                    <li>Persiapan bibit kentang melibatkan penyimpanan umbi selama 3 bulan</li>
+                                    <li>Pertumbuhan tunas selama penyimpanan menunjukkan kualitas umbi yang baik.</li>
+                                    <li>Pilih umbi bibit dengan berat 30-50 gram</li>
+                                    <li>Pilih umbi yang tidak cacat dan memiliki 3-5 tunas dengan tinggi sekitar 2 cm.</li>
+                                </ul>
+                                <p><strong>Persiapan Lahan:</strong></p>
+                                <ul>
+                                    <li>Olah lahan dengan cangkul atau peralatan pertanian hingga kedalaman 30-40 cm.</li>
+                                    <li>Lakukan pembajakan 2-3 kali pada tanah keras untuk memastikan kegemburan dan kesuburan tanah.</li>
+                                    <li>Taburkan pupuk kandang atau kompos ke tanah, lalu cangkul merata. Dan diamkan selama 7 hari untuk penyerapan nutrisi ke dalam tanah.</li>
+                                    <li>Bentuk bedengan dengan orientasi memanjang dari Barat ke Timur untuk optimalisasi sinar matahari, atau tegak lurus dengan kemiringan tanah pada lahan berbukit untuk mencegah erosi.</li>
+                                </ul>
+                                <p><strong>Penanaman:</strong></p>
+                                <ul>
+                                    <li>Lakukan penanaman kentang pada lahan yang telah disiapkan, umumnya pada akhir musim hujan hingga awal musim kemarau.</li>
+                                    <li>Pilih waktu penanaman yang tepat, karena kentang tidak dapat membentuk umbi pada suhu yang terlalu tinggi.Hindari penanaman kentang pada curah hujan tinggi karena dapat meningkatkan risiko pembusukan umbi.</li>
+                                    <li>Tanam umbi pada lubang tanam dengan kedalaman sekitar 7 cm.</li>
+                                    <li>Letakkan umbi dengan posisi tunas menghadap ke atas.</li>
+                                    <li>Jarak tanam yang disarankan adalah 45 cm x 30 cm. Dan tutup lubang dengan merata.</li>
+                                </ul>
+                                <p><strong>Pemeliharaan:</strong></p>
+                                <ul>
+                                    <li>Setelah 10 hari penanaman, bibit kentang biasanya sudah tumbuh merata.</li>
+                                    <li>Pada usia 1 bulan, lakukan penambahan media tanam atau tanah pada polybag untuk melindungi umbi dari sinar matahari langsung, yang dapat menyebabkan perubahan warna menjadi hijau dan beracun.</li>
+                                    <li>Berikan pemupukan menggunakan pupuk organik dan anorganik seperti Urea, ZA, SP36, dan KCL.</li>
+                                    <li>Perhatikan pertumbuhan bunga dan lakukan pemangkasan bunga agar proses pembentukan umbi tidak terganggu.</li>
+                                    <li>Atur jadwal pengairan dengan memberikan air secara rutin, namun tidak terlalu sering, sekitar 1 kali setiap 7 hari untuk menjaga kelembaban tanah.</li>
+                                </ul>
+                                <p><strong>Panen dan Pasca Panen:</strong></p>
+                                <ul>
+                                    <li>Masa panen kentang berkisar antara 90-120 hari, tergantung pada tipe kentang. Untuk tipe medium bisa lebih lama, 120-150 hari, dan tipe dalam bahkan 150-180 hari.</li>
+                                    <li>Kentang siap dipanen ketika tanaman sudah menguning/kering, kulit umbi kuat, dan batang dipangkas satu minggu sebelum panen untuk memperkeras umbi.</li>
+                                    <li>Pemanenan dilakukan dengan menggali tanah dan menyisir umbi dari ujung bedengan ke ujung lainnya. Umbi dibersihkan dari tanah, dimasukkan ke dalam keranjang, dan diangkut ke gudang penampungan.</li>
+                                    <li>Kegiatan setelah panen melibatkan pemeliharaan, penyimpanan, pemeriksaan umbi calon benih, dan pengemasan.</li>
+                                    <li>Penyortiran dilakukan untuk memisahkan umbi yang bergejala penyakit atau rusak mekanis, serta dilakukan grading ukuran benih jika diperlukan.</li>
+                                    <li>Kemasan kentang dapat berupa karung net, dus, atau kayu yang kuat dan melindungi benih, dengan setiap kemasan berdasarkan keseragaman ukuran atau campuran ukuran.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

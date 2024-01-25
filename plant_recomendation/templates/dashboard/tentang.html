@@ -1,0 +1,33 @@
+{% extends 'partials/base.html' %}
+{% block title %}Tentang Aplikasi{% endblock %}
+{% block content %}
+<div class="container " style="padding-top:4rem">
+    <div class="row mt-4" >
+        <div style="display:flex;flex-direction:column;align-items: center;justify-content: center;">
+            <div class="col-md-4 my-4">
+                <img class="img-fluid" src="{{ MEDIA_URL }}media/welcome.png" alt="Ilustrasi Aplikasi">
+            </div>
+            <h1 class="text-center">Tentang Aplikasi</h1>
+        </div>
+        <div class="col-md-8 offset-md-2">
+            <div class="p-4">
+                <p class="lead text-center">
+                    Selamat datang di Aplikasi Rekomendasi Tanaman, sebuah proyek penelitian yang dibuat sebagai bagian dari Skripsi Teknik Informatika di STMIK Widya Pratama.
+                </p>
+                <p class="text-justify" style='margin-top:2rem'>
+                    Aplikasi ini dikembangkan untuk memberikan rekomendasi tanaman sayuran hortikultura berdasarkan kondisi area tanam, seperti ketinggian di atas permukaan laut (mdpl) dan temperatur. Proyek ini bertujuan untuk membantu para petani dalam menentukan jenis tanaman yang sesuai dengan kondisi lahan mereka.
+                </p>
+                <p class="text-justify">
+                    Proyek ini merupakan hasil kerjasama antara peneliti dan pembimbing Skripsi. Dalam proses pengembangan, kami menggunakan berbagai teknologi dan metodologi untuk memastikan aplikasi ini memberikan hasil yang optimal.
+                </p>
+                <p class="text-justify">
+                    Kami berharap Aplikasi Rekomendasi Tanaman ini dapat memberikan manfaat dan menjadi referensi yang berguna bagi para petani, peneliti, dan pihak yang terkait di bidang pertanian dan hortikultura.
+                </p>
+                <p class="font-italic" style='margin-top:2rem'>
+                    Terima kasih atas dukungan dan perhatiannya.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

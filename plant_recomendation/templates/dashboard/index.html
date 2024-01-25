@@ -1,0 +1,19 @@
+{% extends 'partials/base.html' %}
+{% block title %}Home{% endblock %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+{% block content %}
+<div class="container d-flex flex-column align-items-center justify-content-center" style=" height: 90vh; width: 100vw;">
+    <div class="text-center">
+        <div class="col-md-4 offset-md-4">
+            <img class="img-fluid" src="{{ MEDIA_URL }}media/welcome.png" alt="Logo">
+        </div>
+        <div class="col-md-8 offset-md-2">
+            <div class="card-body">
+                <h1>Sistem Pendukung Keputusan</h1>
+                <h4 class="font-weight-normal">Tanaman Sayuran Hortikultura</h4>
+            </div>
+            <a href="{% url 'rekomendasi' %}" type="button" class="btn btn-primary text-sm font-weight-bold mt-10" style='background-color:#163020;border-color:#163020'>Periksa Komoditas Untuk Lahan Kamu</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

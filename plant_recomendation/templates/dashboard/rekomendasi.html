@@ -1,0 +1,91 @@
+    {% extends 'partials/base.html' %}
+    {% block title %}Rekomendasi{% endblock %}
+    {% comment %} {% load crispy_forms_tags %} {% endcomment %}
+    {% block content  %}
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-9 offset-md-2" style="margin-top:3rem">
+                {% if form.errors %}
+                    <div class="alert alert-danger" role="alert" >
+                        Terdapat kesalahan pada nilai formulir. Silakan periksa kembali.
+                    </div>
+                {% endif %}
+                <div class="row" style="display:flex;align-items: center;justify-content: space-evenly;margin-top:2rem">
+                    <div class="col-md-4 my-4">
+                        <img class="img-fluid" src="{{ MEDIA_URL }}media/01.png" alt="Logo">
+                    </div>
+                    <div class="card shadow px-8" style="height: fit-content;padding-left: 2rem;padding-right: 2rem;padding-top: 1rem;padding-bottom: 1rem;">
+                        <div class="card-body" >
+                            <h4 class='mb-4'>Masukkan data kondisi area tanam</h1>
+                            <form action="/rekomendasi" method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="altitude">Ketinggian diatas permukaan laut (mdpl): </label>
+                                    <input type="number" class="form-control" id="altitude" name="altitude" placeholder="500 hingga 1310"  step=".01">
+                                </div>
+                                <div class="form-group">
+                                    <label for="temperature">Temperatur (°C):</label>
+                                    <input type="number" class="form-control" id="temperature" name="temperature" placeholder="1 hingga 12.5"  step=".01">
+                                </div>
+                                <button type="submit" class="btn btn-primary" style='background-color:#163020;border-color:#163020'>Lihat komoditas yang cocok</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% if prediction_result %}
+                <div class="col-md-9 offset-md-2 bg-white " style="margin-top:3rem;margin-bottom:3rem">
+                    <h4 class='mb-4'>Komoditas yang cocok untuk lahan anda</h1>
+                        <p class=''>Ketinggian diatas permukaan laut : {{ form.altitude.value }} mdpl</p>
+                        <p class='mb-4'>Suhu : {{ form.temperature.value }} °C</p>
+                        <p class='mb-4'>Berdasarkan data kondisi area tanam anda yang telah diproses melalui perhitungan model Decision Tree, tanaman yang sesuai untuk anda tanam adalah :</p>
+                        <div  style="display:flex">
+                            <div class="card" style="width: 18rem;background-color:#ffffff">
+                                <div class="card-body">
+                                    {% if prediction_result == "Bayam" %}
+                                        <div class="" style="width: 8rem; margin-bottom:1rem">
+                                            <img class="img-fluid" src="{{ MEDIA_URL }}media/bayam.jpeg" alt="Logo">
+                                        </div >
+                                        <h5 class="card-title">{{ prediction_result }}</h5>
+                                        <p class="card-text">Tanaman bayam berasal dari Amerika yang juga tersebar di daerah tropis dan subtropis di seluruh dunia. Bayam biasa dikonsumsi daunnya yang baik bagi tubuh manusia karena mengandung zat besi.</p>
+                                    {% elif prediction_result == "Brokoli" %}
+                                        <div class="" style="width: 8rem; margin-bottom:1rem">
+                                            <img class="img-fluid" src="{{ MEDIA_URL }}media/brokoli.jpeg" alt="Logo">
+                                        </div >
+                                        <h5 class="card-title">{{ prediction_result }}</h5>
+                                        <p class="card-text">Brokoli merupakan salah satu jenis sayuran dengan tangkai yang kuat dengan tunas kecil-kecil, tumbuh baik pada daerah dingin. Brokoli mengandung vitamin, gizi tinggi serta rendah kalori yang sehat dikonsumsi.</p>
+                                    {% elif prediction_result == "Kacang Buncis" %}
+                                        <div class="" style="width: 8rem; margin-bottom:1rem">
+                                            <img class="img-fluid" src="{{ MEDIA_URL }}media/buncis.jpeg" alt="Logo">
+                                        </div >
+                                        <h5 class="card-title">{{ prediction_result }}</h5>
+                                        <p class="card-text">Kacang Buncis merupakan tanaman sayuran polong semusim yang merambat termasuk ke dalam famili Fabaceae. Buahnya berdaging dan didalamnya terdapat biji-biji muda, yang dikomsumsi sebagai sayur buah.</p>
+                                    {% elif prediction_result == "Lombok" %}
+                                        <div class="" style="width: 8rem; margin-bottom:1rem">
+                                            <img class="img-fluid" src="{{ MEDIA_URL }}media/lombok.jpeg" alt="Logo">
+                                        </div >
+                                        <h5 class="card-title">{{ prediction_result }}</h5>
+                                        <p class="card-text">Lombok / Cabai rawit adalah tanaman hortikultura dari jenis sayuran yang memiliki buah kecil dengan rasa yang pedas. Termasuk dalam famili Solanaceae yang dapat ditanam didaerah tropis maupun subtropis.</p>
+                                    {% elif prediction_result == "Kentang" %}
+                                        <div class="" style="width: 8rem; margin-bottom:1rem">
+                                            <img class="img-fluid" src="{{ MEDIA_URL }}media/kentang.jpeg" alt="Logo">
+                                        </div >
+                                        <h5 class="card-title">{{ prediction_result }}</h5>
+                                        <p class="card-text">Kentang ialah tanaman umbi-umbian edible dan tergolong tanaman pendek tidak berkayu semusim. Kentang membentuk umbi di bawah permukaan tanah dan menjadi sarana perbanyakan secara vegetatif.</p>
+                                    {% endif %}
+                                </div>
+                        </div>
+                </div>
+            {% else %}
+                <div class="col-md-9 offset-md-2" style="display:flex;flex-direction:column; align-items: center;margin-top: 5rem;margin-bottom: 2rem">
+                    <h2 clas="font-weight-bold" style="font-weight: bold;margin-bottom:2rem">OOPPSS....</h2>
+                    <div class="" style="width: 16rem; margin-bottom:2rem">
+                        <img class="img-fluid" src="{{ MEDIA_URL }}media/empty.png" alt="Logo">
+                    </div >
+                    <h5>Silahkan isi formulir untuk mendapatkan rekomendasi.</h5>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endblock %}
