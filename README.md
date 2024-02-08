@@ -6,3 +6,6 @@ Dibuat menggunakan framework [django](https://www.djangoproject.com/) dan diduku
 
 ### Halaman Rekomendasi
 ![image](https://github.com/NizarArdansyah/crop-recomendation/assets/82304620/7c582260-6eff-431b-b5a7-00fe7ba4104b)
+
+## Halaman Komoditas
+![image](https://github.com/NizarArdansyah/crop-recomendation/assets/82304620/709a588d-c661-46ac-b959-d1849c3fd9ce)
